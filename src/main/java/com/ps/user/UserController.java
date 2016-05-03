@@ -22,5 +22,11 @@ public class UserController {
 		return new ResponseEntity<User>(service.createUser(user),
 				HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+	public ResponseEntity<User> loginUser(@RequestBody @Valid User user) {
+		return new ResponseEntity<User>(service.createUser(user),
+				HttpStatus.CREATED);
+	}
 
 }

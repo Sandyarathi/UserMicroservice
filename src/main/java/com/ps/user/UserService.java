@@ -41,7 +41,7 @@ public class UserService {
 
 	}
 
-	public boolean validateModId(int userId) {
+	public boolean validateUserId(int userId) {
 		if (!(userRepo.exists(userId)))
 			return false;
 		return true;
